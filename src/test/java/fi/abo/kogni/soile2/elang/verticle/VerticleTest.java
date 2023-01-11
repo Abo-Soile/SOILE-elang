@@ -45,7 +45,6 @@ public class VerticleTest {
 			vertx.eventBus().request(verticleAddress, codeRequest)
 			.onSuccess( response -> {
 				JsonObject reply = (JsonObject) response.body();
-				System.out.println(reply.encodePrettily());
 				codeReAsync.complete();
 			})
 			.onFailure(err -> context.fail(err));
@@ -68,7 +67,6 @@ public class VerticleTest {
 			vertx.eventBus().request(verticleAddress, codeRequest)
 			.onSuccess( response -> {
 				JsonObject reply = (JsonObject) response.body();
-				System.out.println(reply.encodePrettily());
 				codeReAsync.complete();
 			})
 			.onFailure(err -> context.fail(err));

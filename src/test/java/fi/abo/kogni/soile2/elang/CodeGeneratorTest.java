@@ -59,7 +59,6 @@ public class CodeGeneratorTest extends TestCase {
         {        	
         }
         assertEquals(errors.toString(), "");
-        System.out.println(errors.toString());
     }
 
     @Test
@@ -71,9 +70,7 @@ public class CodeGeneratorTest extends TestCase {
         codeGen.generate(input);
 
         //System.out.println(code.toString());
-        System.out.println(errors.toString());
         assertEquals(errors.toString(), "");
-        System.out.println("Exiting variable test");
     }
 
     @Test
@@ -85,9 +82,7 @@ public class CodeGeneratorTest extends TestCase {
         codeGen.generate(input);
 
         //System.out.println(code.toString());
-        System.out.println(errors.toString());
         assertEquals(errors.toString(), "Variable arrs on line 10 is undefined");
-        System.out.println("Exiting unassigned variable test");
     }
 
     @Test
@@ -134,7 +129,6 @@ public class CodeGeneratorTest extends TestCase {
         StringReader input = new StringReader(codeString);
         codeGen.generate(input);
 
-        System.out.println(code.toString());        
         BufferedWriter bw = new BufferedWriter(new FileWriter(new File("Test.html")));
         try {
         	bw.write(code.toString());
@@ -153,8 +147,6 @@ public class CodeGeneratorTest extends TestCase {
         StringReader input = new StringReader(codeString);
         codeGen.generate(input);
 
-        System.out.println(code.toString());
-        System.out.println(errors.toString());
 
         assertEquals(errors.toString(), "");
 
@@ -166,8 +158,6 @@ public class CodeGeneratorTest extends TestCase {
         StringReader input = new StringReader(codeString);
         codeGen.generate(input);
 
-        System.out.println(code.toString());
-        System.out.println(errors.toString());
 
     }
 
@@ -177,15 +167,7 @@ public class CodeGeneratorTest extends TestCase {
         StringReader input = new StringReader(codeString);
         codeGen.generate(input);
 
-        System.out.println(code.toString());
-        System.out.println(errors.toString());
 
-    }
-
-    @Test
-    public void testRandom() throws Exception {
-        System.out.println("Random test is random");
-        assertEquals(1,1);
     }
 
     static String readFile(String path, Charset encoding)    

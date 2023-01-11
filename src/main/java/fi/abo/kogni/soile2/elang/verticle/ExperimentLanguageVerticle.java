@@ -19,7 +19,6 @@ public class ExperimentLanguageVerticle extends AbstractVerticle {
 	private String address;
 	
 	public ExperimentLanguageVerticle(String address) {
-		// TODO Auto-generated constructor stub
 		this.address = address;
 		URL fullFileName = ExperimentLanguageVerticle.class.getClassLoader().getResource("elang.stg");
 		template1 = new STGroupFile(fullFileName);
