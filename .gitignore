@@ -6,7 +6,7 @@
 
 ### Compiled Files ###
 **/target/**/*
-
+**/bin/**/*
 
 ### logs ###
 soile-http_server/logs/*
